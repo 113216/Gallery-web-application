@@ -31,6 +31,7 @@ function UploadForm() {
         },
         onSubmit: (values) => {
             setFile(changedFile)
+            document.getElementById('formFile').value = '';
             formik.resetForm()
         }
     })

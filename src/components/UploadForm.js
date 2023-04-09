@@ -31,6 +31,7 @@ function UploadForm() {
         },
         onSubmit: (values) => {
             setFile(changedFile)
+            formik.resetForm()
         }
     })
     const handleChange = (e) => {

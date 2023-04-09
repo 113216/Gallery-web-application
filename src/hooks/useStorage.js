@@ -4,7 +4,7 @@ import { projectFirestore, projectStorage, timestamp } from "../firebase/Config"
 
 
 
-const useStorage = (file) => {
+const useStorage = (file, filename) => {
     const [progress, setProgress] = useState(0);
     const [error, setError] = useState(null);
     const [url, setUrl] = useState(null);
@@ -22,7 +22,7 @@ const useStorage = (file) => {
         }, async () => {
             const url = await storageRef.getDownloadURL();
             const createdAt = timestamp();
-            await collectionRef.add({ url, createdAt });
+            await collectionRef.add({ url, createdAt, filename });
             setUrl(url);
         });
     }, [file]);

@@ -34,7 +34,7 @@ form{
   margin: 30px auto 10px;
   text-align: center;
 }
-label input{
+/* label input{
   height: 0;
   width: 0;
   opacity: 0;
@@ -50,11 +50,11 @@ label{
   color: var(--primary);
   font-weight: bold;
   font-size: 24px;
-}
-label:hover{
+} */
+/* label:hover{
   background: var(--primary);
   color: white;
-}
+} */
 .output{
   height: 60px;
   font-size: 0.8rem;
@@ -110,4 +110,10 @@ label:hover{
   margin: 60px auto;
   box-shadow: 3px 5px 7px rgba(0,0,0,0.5);
   border: 3px solid white;
+}
+
+.loading{
+  font-size: large;
+  font-weight: bolder;
+  margin-right: 20px;
 }
